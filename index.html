@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <!-- Search & Location -->
+
+
+
+        <div class="header">
+            <div class="dark-mode-container">
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="dark-mode-label">Dark Mode</span>
+            </div>
+
+            <div class="search-container">
+                
+                <input type="text" id="citySearch" placeholder="Search for your preferred city...">
+            </div>
+
+            <button id="locationBtn">
+               Current Location
+            </button>
+        </div>
+
+        <!-- Main Weather Info -->
+        <div class="weather-info mt-3">
+            <!-- First Card - City, Time, and Date -->
+            <div class=" city-card">
+                <h2 id="cityName">Athens</h2>
+                <h1 id="time">09:03</h1>
+                <p id="date">Thursday, 31 Aug</p>
+            </div>
+
+
+            <!-- Second Card - Weather Details -->
+            <div class="weather-card weather-details">
+                <div class="left-section">
+                    <h2 id="temp">24°C</h2>
+                    <p class="feelsLike">Feels like: <span id="feelsLike">22°C</span></p>
+                    <div class="sun-time">
+                        <div class="sun-info">
+                            <img src="images/sunrise.png" class="card2-img">
+                            <p>Sunrise<br><span id="sunrise">06:37 AM</span></p>
+                        </div>
+                        <div class="sun-info">
+                            <img src="images/sunset.png" class="card2-img">
+                            <p>Sunset<br><span id="sunset">20:37 PM</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="center-section">
+                    <img id="weatherIcon" src="images/sunny.png" class="card2-img-sun">
+                    <p id="weatherCondition">Sunny</p>
+                </div>
+
+                <div class="right-section">
+                    <div class="weather-info">
+                        <!-- Humidity -->
+                        <div class="info-box">
+                            <img src="images/humidity.png" class="card2-right-img">
+                            <div class="text-center">41% <br> <small>Humidity</small></div>
+                        </div>
+
+                        <!-- Wind Speed -->
+                        <div class="info-box">
+                            <img src="images/wind-speed.png" class="card2-right-img">
+                            <div class="text-center">2km/h <br> <small>Wind Speed</small></div>
+                        </div>
+
+                        <!-- Pressure -->
+                        <div class="info-box">
+                            <img src="images/pressure.png" class="card2-right-img">
+                            <div class="text-center">997hPa <br> <small>Pressure</small></div>
+                        </div>
+
+                        <!-- UV Index -->
+                        <div class="info-box">
+                            <img src="images/Uv.png" class="card2-right-img">
+                            <div class="text-center">8 <br> <small>UV</small></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <!-- Forecast Sections -->
+        <div class="forecast">
+
+            <div class="forecast-box">
+                <h3>5 Days Forecast:</h3>
+                <ul id="forecastList">
+                    <li> <img src="images/cloud-sun.png" class="forecast-img"> 20°C Friday, 1 Sep</li>
+                    <li><img src="images/cloud-half-sun.png" class="forecast-img"> 22°C Saturday, 2 Sep </li>
+                    <li><img src="images/sun1.png" class="forecast-img"> 27°C Sunday, 3 Sep </li>
+                    <li><img src="images/sun-rain.png" class="forecast-img"> 18°C Monday, 4 Sep </li>
+                    <li><img src="images/sun-rain2.png" class="forecast-img">16°C Tuesday, 5 Sep </li>
+                </ul>
+            </div>
+
+
+
+
+            <div class="weather-card hourly-forecast">
+                <h3>Hourly Forecast:</h3>
+                <div class="hourly-container">
+                    <div class="hourly-item">
+                        <p>12:00</p>
+                        <img src="images/sunny.png" class="forecast-img5">
+                        <p>26°C</p>
+                        <img src="images/paper-plane2.png" class="forecast-img5">
+                        <p>3km/h</p>
+                    </div>
+                    <div class="hourly-item">
+                        <p>15:00</p>
+                        <img src="images/sunny.png" class="forecast-img5">
+                        <p>27°C</p>
+                        <img src="images/paper-plane1.png" class="forecast-img5">
+                        <p>2km/h</p>
+                    </div>
+                    <div class="hourly-item">
+                        <p>18:00</p>
+                        <img src="images/cloud-half-sun.png" class="forecast-img5">
+                        <p>27°C</p>
+                        <img src="images/paper-plane2.png" class="forecast-img5">
+                        <p>2km/h</p>
+                    </div>
+                    <div class="hourly-item">
+                        <p>21:00</p>
+                        <img src="images/cloud-half-sun.png" class="forecast-img5">
+                        <p>25°C</p>
+                        <img src="images/paper-plane1.png" class="forecast-img5">
+                        <p>3km/h</p>
+                    </div>
+                    <div class="hourly-item">
+                        <p>00:00</p>
+                        <img src="images/sun1.png" class="forecast-img5">
+                        <p>22°C</p>
+                        <img src="images/paper-plane2.png" class="forecast-img5">
+                        <p>3km/h</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
